@@ -48,13 +48,25 @@ This is a Task Management application built with Laravel and Vue.js. It allows u
     php artisan migrate
     ```
 
-7. **Run the database seeders (optional):**
+7. **Register a user:**
+
+    ```bash
+    php artisan tinker
+    ```
+
+    In the Tinker console, run the following command to create a user:
+
+    ```php
+    \App\Models\User::create(['name' => 'Admin', 'email' => 'admin@example.com', 'password' => bcrypt('password')]);
+    ```
+
+8. **Run the database seeders (optional):**
 
     ```bash
     php artisan db:seed
     ```
 
-8. **Build the frontend assets:**
+9. **Build the frontend assets:**
 
     ```bash
     npm run dev
@@ -88,6 +100,31 @@ This application uses Swagger for API documentation. To view the API documentati
 
     ```
     http://127.0.0.1:8000/api/documentation
+    ```
+
+## Factories and Seeders
+
+To create and run the factories and seeders for `Tag` and `Task` models:
+
+1. **Create the factories:**
+
+    ```bash
+    php artisan make:factory TagFactory --model=Tag
+    php artisan make:factory TaskFactory --model=Task
+    ```
+
+2. **Create the seeders:**
+
+    ```bash
+    php artisan make:seeder TagSeeder
+    php artisan make:seeder TaskSeeder
+    ```
+
+3. **Run the seeders:**
+
+    ```bash
+    php artisan db:seed --class=TagSeeder
+    php artisan db:seed --class=TaskSeeder
     ```
 
 ## Clearing Cache

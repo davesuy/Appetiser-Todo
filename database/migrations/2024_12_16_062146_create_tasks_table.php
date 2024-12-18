@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->text('description');
             $table->date('due_date')->nullable();
             $table->enum('priority', ['Urgent', 'High', 'Normal', 'Low'])->nullable();
-            $table->integer('order');
+            $table->integer('order')->default(0);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamp('completed_at')->nullable();
             $table->timestamps();
