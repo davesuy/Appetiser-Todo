@@ -102,31 +102,6 @@ This application uses Swagger for API documentation. To view the API documentati
     http://127.0.0.1:8000/api/documentation
     ```
 
-## Factories and Seeders
-
-To create and run the factories and seeders for `Tag` and `Task` models:
-
-1. **Create the factories:**
-
-    ```bash
-    php artisan make:factory TagFactory --model=Tag
-    php artisan make:factory TaskFactory --model=Task
-    ```
-
-2. **Create the seeders:**
-
-    ```bash
-    php artisan make:seeder TagSeeder
-    php artisan make:seeder TaskSeeder
-    ```
-
-3. **Run the seeders:**
-
-    ```bash
-    php artisan db:seed --class=TagSeeder
-    php artisan db:seed --class=TaskSeeder
-    ```
-
 ## Clearing Cache
 
 If you encounter any issues, try clearing the cache:
