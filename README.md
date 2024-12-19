@@ -9,6 +9,13 @@ This is a Task Management application built with Laravel and Vue.js. It allows u
 - Node.js and npm
 - MySQL or any other supported database
 
+## Quick Demonstration
+
+For a quick demonstration of the application, you can watch the following video:
+
+https://www.loom.com/share/75e9b0ffe2e84c1c88f2b91002e21acf
+
+
 ## Installation
 
 1. **Clone the repository:**
